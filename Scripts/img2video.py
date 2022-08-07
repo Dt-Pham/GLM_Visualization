@@ -32,10 +32,10 @@ for image in images:
 
     image_path = os.path.join(dir_path, image)
     frame = cv2.imread(image_path)
+    resizedFrame = cv2.resize(frame, (width, height), interpolation = cv2.INTER_AREA) 
+    out.write(resizedFrame) # Write out frame to video
 
-    out.write(frame) # Write out frame to video
-
-    cv2.imshow('video',frame)
+    cv2.imshow('video', resizedFrame)
     if (cv2.waitKey(1) & 0xFF) == ord('q'): # Hit `q` to exit
         break
 
