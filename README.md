@@ -9,6 +9,6 @@ Follow this [tutorial](https://github.com/deeplycloudy/glmtools/blob/master/docs
 Prerequisite: [Cloud SDK](https://cloud.google.com/sdk/docs/install)
 
 ```bash
-cd Script
+cd Scripts
 python3 DataCollector.py
 ```
