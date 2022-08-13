@@ -14,9 +14,16 @@ parser.add_argument(
     type = lambda s: datetime.datetime.strptime("%Y-%m-%d")
 )
 
+parser.add_argument(
+    "end_date", 
+    help = "end of the time range we want to download", 
+    type = lambda s: datetime.datetime.strptime("%Y-%m-%d")
+)
+
 parser.add_argument("--verbose", help="increase output verbosity", action="store_true")
 
 args = parser.parse_args()
+
 
 if args.verbose:
     print(args.square, "^ 2 =", end = " ")
